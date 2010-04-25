@@ -1,0 +1,5 @@
+div.infowindow {
+	max-height:250px;
+	overflow-y:auto;
+	font-size: 10px;	
+}

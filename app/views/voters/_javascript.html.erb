@@ -1,0 +1,71 @@
+<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAX36E1nZk5Y_EfaK_X8fUfhSBhh7Gl9DH7P-2lDZQPUdwwFTN6xQs4Y6pP1qXRpLp2cYN6B2hP1zIwQ"></script>
+<script>
+var map = null;
+var geocoder = null;
+var geoXml; 
+var bounds = new GLatLngBounds();
+var baseIcon = new GIcon(G_DEFAULT_ICON);
+baseIcon.shadow = "http://www.google.com/mapfiles/shadow50.png";
+baseIcon.iconSize = new GSize(30, 30);
+baseIcon.shadowSize = new GSize(37, 34);
+baseIcon.iconAnchor = new GPoint(9, 34);
+baseIcon.infoWindowAnchor = new GPoint(9, 2)	
+    
+function initialize() {
+  if (GBrowserIsCompatible()) {
+    map = new GMap2(document.getElementById("map_canvas"));
+    map.enableDoubleClickZoom();
+    map.enableScrollWheelZoom();
+    map.setCenter(new GLatLng(36.107924,-115.172424), 9);
+    map.addControl(new GSmallMapControl());
+    map.addControl(new GMapTypeControl());
+    geocoder = new GClientGeocoder();
+  }
+}
+    
+<% date = voter.date_searched.to_date %>
+
+function showAddress(address) {
+  if (geocoder) {
+    geocoder.getLatLng(
+      address,
+      function(point) {
+        if (!point) {
+          alert(address + " not found");
+        } else {
+          map.setCenter(point, 12);
+          var houseIcon = new GIcon(baseIcon);
+          houseIcon.image = "http://media.roryreid.com.s3.amazonaws.com/house-image.png";
+          markerOptions = { icon:houseIcon };
+          var marker = new GMarker(point, markerOptions);          
+          map.addOverlay(marker);
+          marker.openInfoWindowHtml('<span style="font-size: 10pt; font-family: sans-serif;">' +
+                                    address + '</span>');
+	        geoXml = new GGeoXml("http://media.roryreid.com.s3.amazonaws.com/kml/<%= date.strftime("%B") %>-<%= date.day %>.kml");
+	        map.addOverlay(geoXml);	 
+        }
+      } 
+    );
+  }
+}
+</script>
+<script>
+$(window).load(function () {
+  showAddress("<%= voter.street_address %>");
+});
+</script>
+<script>
+$("input[id='addressbox']").val("Enter Street Address");
+
+$("input[id='addressbox']").focus(function(){
+	if ( $("input[id='addressbox']").val()=="Enter Street Address"){
+		$("input[id='addressbox']").val('');
+	}
+});
+
+$("input[id='addressbox']").focusout(function(){
+	if ( $("input[id='addressbox']").val()== ''){
+		$("input[id='addressbox']").val("Enter Street Address");
+						}
+});
+</script>

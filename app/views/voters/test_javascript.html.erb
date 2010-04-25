@@ -1,0 +1,178 @@
+  <script type="text/javascript">
+    //<![CDATA[
+
+    if (GBrowserIsCompatible()) {
+
+      var polys = [];
+      var labels = [];
+      var debug = false; //true;
+      var geocoder = new GClientGeocoder();
+      var geocodedLocation;
+      var geoMarker;
+      var marker;
+
+      // === A method for testing if a point is inside a polygon
+      // === Returns true if poly contains point
+      // === Algorithm shamelessly stolen from http://alienryderflex.com/polygon/ 
+      GPolygon.prototype.Contains = function(point) {
+        var j=0;
+        var oddNodes = false;
+        var x = point.lng();
+        var y = point.lat();
+        for (var i=0; i < this.getVertexCount(); i++) {
+          j++;
+          if (j == this.getVertexCount()) {j = 0;}
+          if (((this.getVertex(i).lat() < y) && (this.getVertex(j).lat() >= y))
+          || ((this.getVertex(j).lat() < y) && (this.getVertex(i).lat() >= y))) {
+            if ( this.getVertex(i).lng() + (y - this.getVertex(i).lat())
+            /  (this.getVertex(j).lat()-this.getVertex(i).lat())
+            *  (this.getVertex(j).lng() - this.getVertex(i).lng())<x ) {
+              oddNodes = !oddNodes
+            }
+          }
+        }
+        return oddNodes;
+      }
+
+    function showAddress(address) {
+      geocodedAddress = address;
+if (debug) GLog.write("showAddress("+address+")");
+      if (geocoder) {
+        geocoder.getLocations(
+          address,
+          function(result) {
+            if (result.Status.code != G_GEO_SUCCESS) {
+              var reason="Code "+result.Status.code;
+              if (reasons[result.Status.code]) {
+                reason = reasons[result.Status.code]
+              } 
+              alert('Could not find "'+address+ '" ' + reason);
+            } else {
+              geocodedResult = result;
+              var p = result.Placemark[0].Point.coordinates;
+              var point = new GLatLng(p[1],p[0]);
+              geocodedLocation = point;
+if (debug) GLog.write("geocoder return "+point);
+              if (geoMarker) map.removeOverlay(geoMarker);
+              geoMarker = new GMarker(point, {title: "geocoded location"});
+              GEvent.addListener(geoMarker, "click", function () {
+                geoMarker.openInfoWindowHtml(geocodedAddress+"<br>"+geoMarker.getLatLng());
+             });
+              map.addOverlay(geoMarker);
+/*
+              if (debug) {
+                 for (i in result.Placemark[0]) {
+                   GLog.write(i);
+                   for (j in i) {
+                      GLog.write(i+":"+j);
+                      for (k in j) {
+                         GLog.write(i+":"+j+":"+k);
+                      }
+                   }
+                 }
+                 // GLog.write(result.ExtendedData+":"+result.ExtendedData.LatLonBox);
+              }
+*/
+              if (result.Placemark[0].ExtendedData
+                  && result.Placemark[0].ExtendedData.LatLonBox) {
+                var NE = new GLatLng(result.Placemark[0].ExtendedData.LatLonBox.north,
+                                     result.Placemark[0].ExtendedData.LatLonBox.east);
+                var SW = new GLatLng(result.Placemark[0].ExtendedData.LatLonBox.south,
+                                     result.Placemark[0].ExtendedData.LatLonBox.west);
+		if (debug) {
+                var NW = new GLatLng(result.Placemark[0].ExtendedData.LatLonBox.north,
+                                     result.Placemark[0].ExtendedData.LatLonBox.west);
+                var SE = new GLatLng(result.Placemark[0].ExtendedData.LatLonBox.south,
+                                     result.Placemark[0].ExtendedData.LatLonBox.east);
+                var polyline = new GPolyline([NE,NW,SW,SE,NE]);
+                map.addOverlay(polyline);
+                } 
+                var bounds = new GLatLngBounds();
+                bounds.extend(NE);
+                bounds.extend(SW);
+                if (debug) {
+                  GLog.write("bb:"+bounds.getCenter()+" zoom="+map.getBoundsZoomLevel(bounds));}
+                map.setCenter(bounds.getCenter(), map.getBoundsZoomLevel(bounds));
+              } else {
+                if (debug) {GLog.write("nbb:"+point+" zoom=13");}
+                map.setCenter(point, 13);
+              }
+              if (marker) {map.removeOverlay(marker);};
+              marker = new GMarker(point);
+              map.addOverlay(marker);
+              // marker.openInfoWindowHtml(address);
+              var precinct = "";
+              for (var i=0; i<polys.length; i++) {
+                if (polys[i].Contains(marker.getLatLng())) {
+                   precinct = "served by "+labels[i];
+                   if (debug) GLog.write("contained by "+labels[i]);
+                }
+              }
+              marker.openInfoWindowHtml(address+"<br />"+precinct);
+              // loadSV(point);
+            }
+          }
+        );
+      }
+    }
+
+
+      // Display the map, with some controls and set the initial location 
+      var map = new GMap2(document.getElementById("map"));
+      map.addControl(new GLargeMapControl());
+      map.addControl(new GMapTypeControl());
+      map.setCenter(new GLatLng(35.127771,-89.967041),10);
+
+
+      GEvent.addListener(map, "click", function(overlay,point) {
+        if (!overlay) {
+          for (var i=0; i<polys.length; i++) {
+            if (polys[i].Contains(point)) {
+              map.openInfoWindowHtml(point,""+labels[i]);
+              //i = 999; // Jump out of loop
+            }
+          }
+        }
+      });
+   
+
+      // Read the data from precincts.xml
+      
+      var request = GXmlHttp.create();
+      request.open("GET", "memphispolice_precincts.xml", true);
+      request.onreadystatechange = function() {
+        if (request.readyState == 4) {
+          var xmlDoc = GXml.parse(request.responseText);
+          // ========= Now process the polylines ===========
+          var precincts = xmlDoc.documentElement.getElementsByTagName("precinct");
+          // read each line
+          for (var a = 0; a < precincts.length; a++) {
+            // get any precincts attributes
+            var label  = precincts[a].getAttribute("name");
+            var color = precincts[a].getAttribute("color");
+            // read each point on that line
+            var points = precincts[a].getElementsByTagName("point");
+            var pts = [];
+            for (var i = 0; i < points.length; i++) {
+               pts[i] = new GLatLng(parseFloat(points[i].getAttribute("lat")),
+                                   parseFloat(points[i].getAttribute("lng")));
+            }
+            var poly = new GPolygon(pts,"#000000",1,1,color,0.5,{clickable:false});
+            polys.push(poly);
+            labels.push(label);
+            map.addOverlay(poly);
+          }
+          // ================================================           
+        }
+      }
+      request.send(null);
+
+    }
+    
+    // display a warning if the browser was not compatible
+    else {
+      alert("Sorry, the Google Maps API is not compatible with this browser");
+    }
+
+    //]]>
+    </script>

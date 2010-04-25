@@ -1,0 +1,41 @@
+<body>
+  <p>
+    <ul>
+    <% form_for :voter, @voter, :url => { :action => "create" } do |f| %>
+    <!---<form action="#" onsubmit="showAddress(this.address.value); return false">      -->
+      <li>
+        <%= f.label :street_address %>
+        <%= f.text_field :street_address %>
+      </li>
+      <li>
+        <%= f.label :zip_code %>
+        <%= f.text_field :zip_code %>
+      </li>
+      <li>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+      </li>
+      <li>
+        <%= f.label :phone_number %>
+        <%= f.text_field :phone_number %>
+      </li>
+      <li>
+        <%= f.label :email %>
+        <%= f.text_field :email %>     
+      </li>
+      <li>
+        <%= f.label :date_searched %>
+        <%= f.text_field :date_searched, :id => "datepicker" %>
+      </li>
+      <li>
+        <%= f.submit "Find my early vote location"%> 
+      </li>
+    <% end -%>
+    </ul>
+  </p>
+</body>
+<script type="text/javascript">
+	$(function() {
+		$("#datepicker").datepicker();
+	});
+</script>

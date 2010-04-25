@@ -1,0 +1,7 @@
+<body onload="initialize();" onunload="GUnload()" style="font-family: Arial;border: 0 none;">
+<p>
+  Address <%= @voter.street_address %><br/>
+  Date <%= @voter.date_searched %><br/>
+  <div id="map_canvas" style="width: 500px; height: 300px"></div>
+</p>
+<%= render :partial => "javascript", :locals => {:voter => @voter} %>
