@@ -1,41 +1,33 @@
-<body>
-  <p>
+<body onload="initialize();" id="earlyvote">
+  <div id="header">
+		<img src="images/vote_logo.png" width="419" height="91" class="logo">
+		<div id="header-box"></div>
+  </div>	
+  <div id="wrapper">
     <ul>
-    <% form_for :voter, @voter, :url => { :action => "create" } do |f| %>
-    <!---<form action="#" onsubmit="showAddress(this.address.value); return false">      -->
-      <li>
-        <%= f.label :street_address %>
-        <%= f.text_field :street_address %>
-      </li>
-      <li>
-        <%= f.label :zip_code %>
-        <%= f.text_field :zip_code %>
-      </li>
-      <li>
-        <%= f.label :name %>
-        <%= f.text_field :name %>
-      </li>
-      <li>
-        <%= f.label :phone_number %>
-        <%= f.text_field :phone_number %>
-      </li>
-      <li>
-        <%= f.label :email %>
-        <%= f.text_field :email %>     
-      </li>
-      <li>
-        <%= f.label :date_searched %>
-        <%= f.text_field :date_searched, :id => "datepicker" %>
-      </li>
-      <li>
-        <%= f.submit "Find my early vote location"%> 
-      </li>
-    <% end -%>
+    	<li><a href="#main">Find your early voting location.</a></li>
+      <li><a href="#faq">Questions?</a></li>
     </ul>
-  </p>
+    <div id="main">
+      <div id="map_canvas" style="background-color:#F2F2F2; float:left; height:470px; margin:0px 25px 50px 10px; overflow:hidden; width:489px;"></div>
+        <div id="form">
+          <% form_for :voter, @voter, :url => { :action => "create" } do |f| %>          
+            <%= f.label :street_address %>
+            <%= f.text_field :street_address, :id => "address" %> 
+            <%= f.label :name %>
+            <%= f.text_field :name, :id => "name" %>  
+            <%= f.label :phone_number %>
+            <%= f.text_field :phone_number, :id => "phone" %>        
+            <%= f.label :email %>
+            <%= f.text_field :email, :id => "email" %>
+            <%= f.label :date_searched %>
+            <%= f.text_field :date_searched, :id => "date" %>
+            <%= f.submit "SEARCH" %>
+          <% end -%> 
+        </div>
+      </div>
+      <div id="faq"><ul><li>Question 1</li></ul></div>
+    </div>
+  </div>
 </body>
-<script type="text/javascript">
-	$(function() {
-		$("#datepicker").datepicker();
-	});
-</script>
+<%= render :partial => "javascript" %>

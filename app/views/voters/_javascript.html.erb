@@ -22,8 +22,9 @@ function initialize() {
     geocoder = new GClientGeocoder();
   }
 }
-    
+<% if params[:action] == 'show' %>    
 <% date = voter.date_searched.to_date %>
+
 
 function showAddress(address) {
   if (geocoder) {
@@ -49,11 +50,13 @@ function showAddress(address) {
   }
 }
 </script>
+
 <script>
 $(window).load(function () {
   showAddress("<%= voter.street_address %>");
 });
 </script>
+<% end %>
 <script>
 $("input[id='addressbox']").val("Enter Street Address");
 
