@@ -16,7 +16,7 @@ function initialize() {
     map = new GMap2(document.getElementById("map_canvas"));
     map.enableDoubleClickZoom();
     map.enableScrollWheelZoom();
-    map.setCenter(new GLatLng(36.107924,-115.172424), 9);
+    map.setCenter(new GLatLng(38.565348,-116.125488), 6);
     map.addControl(new GSmallMapControl());
     map.addControl(new GMapTypeControl());
     geocoder = new GClientGeocoder();
@@ -56,7 +56,6 @@ $(window).load(function () {
   showAddress("<%= voter.street_address %>");
 });
 </script>
-<% end %>
 <script>
 $("input[id='addressbox']").val("Enter Street Address");
 
@@ -71,4 +70,5 @@ $("input[id='addressbox']").focusout(function(){
 		$("input[id='addressbox']").val("Enter Street Address");
 						}
 });
+<% end %>
 </script>

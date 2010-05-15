@@ -6,5 +6,27 @@
     <%= stylesheet_link_tag "ui-darkness/jquery-ui-1.8.custom", "vote" %>
     <title>Map Tool</title>
   </head>
-    <%= yield %>
+  <body onload="initialize();" id="earlyvote">
+    <div id="header">
+  		<img src="images/vote_logo.png" width="419" height="91" class="logo">
+  		<div id="header-box"></div>
+    </div>	
+    <div id="wrapper">
+      <ul>
+      	<li><a href="#main">Find your early voting location.</a></li>
+        <li><a href="#faq">Questions?</a></li>
+      </ul>
+      <div id="main">
+        <div id="map_canvas" style="background-color:#F2F2F2; float:left; height:470px; margin:0px 25px 50px 10px; overflow:hidden; width:489px; color: #000000"></div>
+        <%= yield %>
+        </div>
+        <div id="faq"><ul><li>Question 1</li></ul></div>
+      </div>
+    </div>
+  </body>
+  <% if params[:action] == 'new' %>
+    <%= render :partial => "javascript" %>
+  <% elsif params[:action] == 'show' %>
+    <%= render :partial => "javascript", :locals => {:voter => @voter} %>
+  <% end %>
 </html>​

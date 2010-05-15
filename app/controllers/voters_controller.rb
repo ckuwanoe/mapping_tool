@@ -11,6 +11,9 @@ class VotersController < ApplicationController
   end
   
   def create
+    if params[:voter][:month] and params[:voter][:day]
+      params[:voter][:date_searched] = '2010-' + params[:voter][:month] + '-' + params[:voter][:day]
+    end
     @voter = Voter.new(params[:voter])
     if @voter.save
       flash[:notice] = "Successfully created voter."

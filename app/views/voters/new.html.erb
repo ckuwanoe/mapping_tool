@@ -1,33 +1,15 @@
-<body onload="initialize();" id="earlyvote">
-  <div id="header">
-		<img src="images/vote_logo.png" width="419" height="91" class="logo">
-		<div id="header-box"></div>
-  </div>	
-  <div id="wrapper">
-    <ul>
-    	<li><a href="#main">Find your early voting location.</a></li>
-      <li><a href="#faq">Questions?</a></li>
-    </ul>
-    <div id="main">
-      <div id="map_canvas" style="background-color:#F2F2F2; float:left; height:470px; margin:0px 25px 50px 10px; overflow:hidden; width:489px;"></div>
-        <div id="form">
-          <% form_for :voter, @voter, :url => { :action => "create" } do |f| %>          
-            <%= f.label :street_address %>
-            <%= f.text_field :street_address, :id => "address" %> 
-            <%= f.label :name %>
-            <%= f.text_field :name, :id => "name" %>  
-            <%= f.label :phone_number %>
-            <%= f.text_field :phone_number, :id => "phone" %>        
-            <%= f.label :email %>
-            <%= f.text_field :email, :id => "email" %>
-            <%= f.label :date_searched %>
-            <%= f.text_field :date_searched, :id => "date" %>
-            <%= f.submit "SEARCH" %>
-          <% end -%> 
-        </div>
-      </div>
-      <div id="faq"><ul><li>Question 1</li></ul></div>
-    </div>
-  </div>
-</body>
-<%= render :partial => "javascript" %>
+<div id="form">
+  <% form_for :voter, @voter, :url => { :action => "create" } do |f| %>          
+    <%= f.label :street_address %>
+    <%= f.text_field :street_address, :id => "address" %> 
+    <%= f.label :name %>
+    <%= f.text_field :name, :id => "name" %>  
+    <%= f.label :phone_number %>
+    <%= f.text_field :phone_number, :id => "phone" %>        
+    <%= f.label :email %>
+    <%= f.text_field :email, :id => "email" %>
+    <%= f.label :date_searched %>
+    <%= f.text_field :date_searched, :id => "date" %>
+    <%= f.submit "SEARCH" %>
+  <% end -%> 
+</div>
