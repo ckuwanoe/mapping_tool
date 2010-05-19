@@ -20,12 +20,6 @@ namespace :deploy do
   desc "Restart Application"    
   task :restart do
     #run "rake db:migrate --rakefile #{deploy_to}/current/Rakefile RAILS_ENV=production"
-    run "rm -rf /var/www/public_html/#{application}/current/vendor/plugins/restful_authentication"
-    run "ln -s /var/www/public_html/#{application}/shared/plugins/restful_authentication /var/www/public_html/#{application}/current/vendor/plugins/restful_authentication"    
-    run "rm -rf /var/www/public_html/#{application}/current/vendor/plugins/open_flash_chart"
-    run "ln -s /var/www/public_html/#{application}/shared/plugins/open_flash_chart /var/www/public_html/#{application}/current/vendor/plugins/open_flash_chart"
-    run "rm -rf /var/www/public_html/#{application}/current/public/spreadsheets"
-    run "ln -s /var/www/public_html/#{application}/shared/spreadsheets /var/www/public_html/#{application}/current/public/spreadsheets"  
     run "rm -rf /var/www/public_html/#{application}/current/vendor/plugins/pretty_flash"
     run "ln -s /var/www/public_html/#{application}/shared/plugins/pretty_flash /var/www/public_html/#{application}/current/vendor/plugins/pretty_flash"
     run "touch #{current_release}/tmp/restart.txt"
