@@ -3192,3 +3192,52 @@ Rendering template within layouts/application
 Rendering voters/new
 Rendered voters/_javascript (0.2ms)
 Completed in 122ms (View: 71, DB: 24) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#create (for 127.0.0.1 at 2010-05-19 16:00:08) [POST]
+  Parameters: {"commit"=>"SEARCH", "authenticity_token"=>"S1uyoW5vxx8zB4yIIZY08IARQHQLB120gqSgiSUr6Nw=", "voter"=>{"name"=>"Corey Kuwanoe", "city"=>"Las Vegas", "date_searched"=>"05/22/2010", "phone_number"=>"7027684176", "street_address"=>"1525 Canyon Ledge Ct", "email"=>"eschalon@gmail.com"}}
+  [4;36;1mVoter Columns (5.3ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+  [4;35;1mSQL (2.6ms)[0m   [0mBEGIN[0m
+  [4;36;1mVoter Create (17.2ms)[0m   [0;1mINSERT INTO `voters` (`name`, `city`, `created_at`, `zip_code`, `updated_at`, `date_searched`, `street_address`, `phone_number`, `email`) VALUES('Corey Kuwanoe', 'Las Vegas', '2010-05-19 23:00:08', NULL, '2010-05-19 23:00:08', '2010-05-22', '1525 Canyon Ledge Ct', '7027684176', 'eschalon@gmail.com')[0m
+  [4;35;1mSQL (6.1ms)[0m   [0mCOMMIT[0m
+Sent mail to ckuwanoe@roryreid.com
+
+Date: Wed, 19 May 2010 16:00:08 -0700
+From: ckuwanoe@roryreid.com
+To: ckuwanoe@roryreid.com
+Subject: Corey Kuwanoe has looked up their voting location in Las Vegas
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Corey Kuwanoe has looked up their early vote location.
+
+They looked up address: 1525 Canyon Ledge Ct.
+
+You can contact them at 7027684176.
+Redirected to http://localhost:4000/voters/16
+Completed in 871ms (DB: 32) | 302 Found [http://localhost/voters]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#show (for 127.0.0.1 at 2010-05-19 16:00:09) [GET]
+  Parameters: {"id"=>"16"}
+  [4;36;1mVoter Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+  [4;35;1mVoter Load (0.9ms)[0m   [0mSELECT * FROM `voters` WHERE (`voters`.`id` = 16) [0m
+Rendering template within layouts/application
+Rendering voters/show
+Rendered voters/_javascript (0.2ms)
+Completed in 20ms (View: 8, DB: 4) | 200 OK [http://localhost/voters/16]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#images to png (for 127.0.0.1 at 2010-05-19 16:00:09) [GET]
+  Parameters: {"id"=>"vote_logo"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
