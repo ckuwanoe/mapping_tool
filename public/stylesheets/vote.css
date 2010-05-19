@@ -88,7 +88,7 @@ body#earlyvote #map_canvas {
 
 body#earlyvote #form {
 	float:left;
-	margin:0px 10px 50px 10px;
+	margin:0px 10px 10px 10px;
 	min-height:470px;
 	text-align:right;
 	width:425px;
