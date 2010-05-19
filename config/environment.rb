@@ -38,4 +38,20 @@ Rails::Initializer.run do |config|
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
+  
+  # Action Mailer to GMail
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+  #:enable_starttls_auto => :true,
+  :address => "smtp.emailsrvr.com",
+  :port => 587,
+  :domain => "roryreid.com",
+  :authentication => :plain,
+  :user_name => "ckuwanoe@roryreid.com",
+  :password => "cr8tion",
+  :tls => :true
+  }
+  config.action_mailer.perform_deliveries = :true
+  config.action_mailer.raise_delivery_errors = :true
+  config.action_mailer.default_charset = "utf-8"
 end

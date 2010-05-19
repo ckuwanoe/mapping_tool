@@ -17,6 +17,7 @@ class VotersController < ApplicationController
     @voter = Voter.new(params[:voter])
     if @voter.save
       flash[:notice] = "Successfully created voter."
+      VoterMailer.deliver_send_notice(@voter)
       redirect_to @voter
     else
       render :action => 'new'
