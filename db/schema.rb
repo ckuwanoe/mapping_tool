@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100422173639) do
+ActiveRecord::Schema.define(:version => 20100519221739) do
 
   create_table "voters", :force => true do |t|
     t.string   "street_address"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20100422173639) do
     t.date     "date_searched"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "city"
   end
 
 end

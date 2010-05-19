@@ -1,7 +1,9 @@
 <div id="form">
   <% form_for :voter, @voter, :url => { :action => "create" } do |f| %>          
     <%= f.label :street_address %>
-    <%= f.text_field :street_address, :id => "address" %> 
+    <%= f.text_field :street_address, :id => "address" %>
+    <%= f.label :city %>
+    <%= f.text_field :city, :id => "city" %> 
     <%= f.label :name %>
     <%= f.text_field :name, :id => "name" %>  
     <%= f.label :phone_number %>

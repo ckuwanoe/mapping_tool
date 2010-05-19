@@ -7,7 +7,7 @@ class VoterMailer < ActionMailer::Base
     def setup_email(voter)
       @recipients  = "ckuwanoe@roryreid.com"
       @from        = "ckuwanoe@roryreid.com"
-      @subject     = voter.name + " has looked up their voting location"
+      @subject     = voter.name + " has looked up their voting location in " + voter.city
       @sent_on     = Time.now
       @body[:voter] = voter
     end

@@ -3108,3 +3108,87 @@ ActionController::UnknownAction (No action responded to images. Actions: create,
   
 
 Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (11.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (43.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateVoters (20100422173639)
+Migrating to AddCity (20100519221739)
+  [4;36;1mSQL (918.9ms)[0m   [0;1mALTER TABLE `voters` ADD `city` varchar(255)[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100519221739')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mdescribe `voters`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mSHOW KEYS FROM `voters`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-19 15:18:55) [GET]
+  [4;35;1mVoter Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 253ms (View: 239, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-19 15:19:26) [GET]
+  [4;36;1mVoter Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 19ms (View: 12, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-19 15:20:47) [GET]
+  [4;35;1mVoter Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 17ms (View: 10, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 192.168.1.57 at 2010-05-19 15:21:24) [GET]
+  [4;36;1mVoter Columns (4.9ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (1.1ms)
+Completed in 187ms (View: 145, DB: 5) | 200 OK [http://192.168.1.17/]
+  [4;35;1mSQL (11.9ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (3.7ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-19 15:38:38) [GET]
+  [4;35;1mVoter Columns (16.7ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.2ms)
+Completed in 60ms (View: 29, DB: 32) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 192.168.1.57 at 2010-05-19 15:39:38) [GET]
+  [4;36;1mVoter Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 26ms (View: 15, DB: 5) | 200 OK [http://192.168.1.17/]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-19 15:46:01) [GET]
+  [4;35;1mVoter Columns (23.0ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.2ms)
+Completed in 122ms (View: 71, DB: 24) | 200 OK [http://localhost/]
