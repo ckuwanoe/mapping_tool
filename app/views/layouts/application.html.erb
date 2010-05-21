@@ -8,16 +8,20 @@
   </head>
   <body onload="initialize();" id="earlyvote">
     <div id="header">
-  		<a href="http://rory2010.com"><img src="images/vote_logo.png" width="419" height="91" class="logo"></a>
-  		<div id="header-box"></div>
+  		<a href="http://rory2010.com"><img src="/images/vote_logo.png" width="419" height="91" class="logo"></a>
+  		<div id="header-box"><h2>Early Vote is open from May 22 through June 4!</h2></div>
     </div>	
     <div id="wrapper">
       <ul>
       	<li><a href="#main">Find your early voting location.</a></li>
         <li><a href="#faq">Questions?</a></li>
       </ul>
+
       <div id="main">
-        <div id="map_canvas" style="background-color:#F2F2F2; float:left; height:470px; margin:0px 25px 50px 10px; overflow:hidden; width:489px; color: #000000"></div>
+        <%- flash.each do |name, msg| -%>
+          <%= content_tag :div, msg, :id => "flash_#{name}" %>
+        <%- end -%>
+        <div id="map_canvas"></div>
         <%= yield %>
         </div>
         <div id="faq"><ul><li>Question 1</li></ul></div>

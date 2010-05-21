@@ -23,7 +23,5 @@ $(function(){
 				$('#wrapper').removeClass('ui-corner-all');
 				$('body#earlyvote #faq a').button();
 				$('#date').datepicker(); 
-				$('input:submit').button();
-				
-				
-					   });
+				$('input:submit').button();				
+});

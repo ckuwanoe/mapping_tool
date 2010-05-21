@@ -40,7 +40,7 @@ function showAddress(address) {
           markerOptions = { icon:houseIcon };
           var marker = new GMarker(point, markerOptions);          
           map.addOverlay(marker);
-          marker.openInfoWindowHtml('<span style="font-size: 10pt; font-family: sans-serif;">' +
+          marker.openInfoWindowHtml('<span style="font-size: 10pt; font-family: helvetica; color: black">' +
                                     address + '</span>');
 	        geoXml = new GGeoXml("http://media.roryreid.com.s3.amazonaws.com/kml/<%= date.strftime("%B") %>-<%= date.day %>.kml");
 	        map.addOverlay(geoXml);	 

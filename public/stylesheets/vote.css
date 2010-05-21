@@ -27,13 +27,18 @@ body#earlyvote #header {
 }
 	
 body#earlyvote #header-box {
-	background-color:#3C3C3C;
 	float:left;
-	height:212px;
-	margin:10px 20px 10px 155px;
+	height:55px;
+	margin:33px 20px 10px 700px;
 	overflow:hidden;
 	width:382px;
-	display: none;
+}
+
+body#earlyvote #header-box h2 {
+	margin-left: 15px;
+	margin-top: 25px;
+	font-size: 16px;
+	color: #FFFFFF;
 }
 	
 body#earlyvote #wrapper {
@@ -58,7 +63,7 @@ body#earlyvote #wrapper ul:first-child {
 	display:block;
 	position:relative;
 	right:-55px;
-	top:-52px;
+	top:-54px;
 	background: none;
 	border: none;
 	color:#FFFFFF;
@@ -75,15 +80,20 @@ body#earlyvote #faq {
 	
 body#earlyvote #main {
 	overflow: hidden;
+	position: relative;
+	top: -80px;
 }
 	
 body#earlyvote #map_canvas {
 	background-color:#F2F2F2;
 	float:left;
 	height:470px;
-	margin:0px 25px 50px 10px;
+	margin: 45px 25px 50px 10px;
 	overflow:hidden;
+	padding-top: 0px;
 	width:489px;
+	top: 32px;
+	color: #000000;
 }
 
 body#earlyvote #form {
@@ -100,6 +110,13 @@ body#earlyvote #form p {
 	font-size: 22px;
 	margin-right: 13px;
 	color: #666;
+}
+
+body#earlyvote #form #notice {
+	text-transform: none;
+	text-decoration: italic;
+	font-size: 16px;
+	color: red;
 }
 
 body#earlyvote #form label {
@@ -167,4 +184,24 @@ body#earlyvote #form a {
 	background-image:url(../images/overlay.png);
 	margin-left: 117px;
 	margin-top: 42px;
+}
+
+#flash_success, #flash_notice {
+	margin: 1em 20px;
+	padding: 5px;
+  text-align: center;
+	margin-bottom: 0;
+  background-color: #99ccff;
+	border: 1px solid #000033;
+	color: #000000;
+}
+
+#flash_error {
+	margin: 1em 20px;
+	padding: 5px;
+  text-align: center;
+	margin-bottom: 0;
+  background-color: #FFCCCC;
+	border: 1px solid #FF3300;
+	color: #000000;	
 }

@@ -3300,3 +3300,1030 @@ ActionController::UnknownAction (No action responded to images. Actions: create,
   
 
 Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#show (for 127.0.0.1 at 2010-05-19 17:01:30) [GET]
+  Parameters: {"id"=>"17"}
+  [4;35;1mVoter Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+  [4;36;1mVoter Load (0.3ms)[0m   [0;1mSELECT * FROM `voters` WHERE (`voters`.`id` = 17) [0m
+Rendering template within layouts/application
+Rendering voters/show
+Rendered voters/_javascript (0.2ms)
+Completed in 89ms (View: 81, DB: 2) | 200 OK [http://localhost/voters/17]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#images to png (for 127.0.0.1 at 2010-05-19 17:01:30) [GET]
+  Parameters: {"id"=>"vote_logo"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-19 17:01:35) [GET]
+  [4;35;1mVoter Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 20ms (View: 11, DB: 2) | 200 OK [http://localhost/voters/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#images to png (for 127.0.0.1 at 2010-05-19 17:01:36) [GET]
+  Parameters: {"id"=>"vote_logo"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 192.168.1.57 at 2010-05-19 17:26:32) [GET]
+  [4;36;1mVoter Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 19ms (View: 11, DB: 2) | 200 OK [http://192.168.1.17/]
+  [4;35;1mSQL (21.5ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (6.7ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-20 14:20:48) [GET]
+  [4;35;1mVoter Columns (267.9ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.6ms)
+Completed in 1364ms (View: 801, DB: 296) | 200 OK [http://localhost/]
+  [4;36;1mSQL (5.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-20 15:13:14) [GET]
+  [4;36;1mVoter Columns (11.4ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.7ms)
+Completed in 29ms (View: 11, DB: 18) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.5ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#create (for 127.0.0.1 at 2010-05-20 15:14:02) [POST]
+  Parameters: {"commit"=>"SEARCH", "authenticity_token"=>"S1uyoW5vxx8zB4yIIZY08IARQHQLB120gqSgiSUr6Nw=", "voter"=>{"name"=>"Corey Kuwanoe", "city"=>"Las Vegas", "date_searched"=>"05/22/2010", "phone_number"=>"7027684176", "street_address"=>"1525 Canyon Ledge Ct", "email"=>"eschalon@gmail.com"}}
+  [4;35;1mVoter Columns (7.0ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mVoter Create (52.4ms)[0m   [0mINSERT INTO `voters` (`name`, `city`, `created_at`, `zip_code`, `updated_at`, `date_searched`, `street_address`, `phone_number`, `email`) VALUES('Corey Kuwanoe', 'Las Vegas', '2010-05-20 22:14:02', NULL, '2010-05-20 22:14:02', '2010-05-22', '1525 Canyon Ledge Ct', '7027684176', 'eschalon@gmail.com')[0m
+  [4;36;1mSQL (11.0ms)[0m   [0;1mCOMMIT[0m
+Sent mail to anagatani@roryreid.com
+
+Date: Thu, 20 May 2010 15:14:02 -0700
+From: ckuwanoe@roryreid.com
+To: anagatani@roryreid.com
+Subject: Corey Kuwanoe has looked up their voting location in Las Vegas
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Corey Kuwanoe has looked up their early vote location for 2010-05-22.
+
+They looked up address: 1525 Canyon Ledge Ct.
+
+You can contact them at 7027684176.
+Redirected to http://localhost:4000/voters/18
+Completed in 738ms (DB: 73) | 302 Found [http://localhost/voters]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#show (for 127.0.0.1 at 2010-05-20 15:14:02) [GET]
+  Parameters: {"id"=>"18"}
+  [4;35;1mVoter Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+  [4;36;1mVoter Load (16.5ms)[0m   [0;1mSELECT * FROM `voters` WHERE (`voters`.`id` = 18) [0m
+Rendering template within layouts/application
+Rendering voters/show
+Rendered voters/_javascript (0.2ms)
+Completed in 33ms (View: 6, DB: 19) | 200 OK [http://localhost/voters/18]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#images to png (for 127.0.0.1 at 2010-05-20 15:14:03) [GET]
+  Parameters: {"id"=>"vote_logo"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-20 15:14:09) [GET]
+  [4;35;1mVoter Columns (3.5ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 25ms (View: 13, DB: 4) | 200 OK [http://localhost/voters/new]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (7.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#images to png (for 127.0.0.1 at 2010-05-20 15:14:10) [GET]
+  Parameters: {"id"=>"vote_logo"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-20 15:37:14) [GET]
+  [4;36;1mVoter Columns (39.1ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (1.7ms)
+Completed in 424ms (View: 252, DB: 39) | 200 OK [http://localhost/voters/new]
+  [4;35;1mSQL (1.5ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#images to png (for 127.0.0.1 at 2010-05-20 15:37:15) [GET]
+  Parameters: {"id"=>"vote_logo"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#images to png (for 127.0.0.1 at 2010-05-20 15:38:04) [GET]
+  Parameters: {"id"=>"vote_logo"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-20 15:38:53) [GET]
+  [4;35;1mVoter Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 28ms (View: 14, DB: 2) | 200 OK [http://localhost/voters/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#images to png (for 127.0.0.1 at 2010-05-20 15:38:53) [GET]
+  Parameters: {"id"=>"vote_logo"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-20 15:39:36) [GET]
+  [4;36;1mVoter Columns (4.8ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 748ms (View: 729, DB: 5) | 200 OK [http://localhost/voters/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#images to png (for 127.0.0.1 at 2010-05-20 15:39:37) [GET]
+  Parameters: {"id"=>"vote_logo"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-20 15:39:45) [GET]
+  [4;35;1mVoter Columns (5.6ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 22ms (View: 11, DB: 6) | 200 OK [http://localhost/voters/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#images to png (for 127.0.0.1 at 2010-05-20 15:39:45) [GET]
+  Parameters: {"id"=>"vote_logo"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-20 15:40:01) [GET]
+  [4;36;1mVoter Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 16ms (View: 9, DB: 2) | 200 OK [http://localhost/voters/new]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#images to png (for 127.0.0.1 at 2010-05-20 15:40:01) [GET]
+  Parameters: {"id"=>"vote_logo"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.8ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-20 15:40:23) [GET]
+  [4;35;1mVoter Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 19ms (View: 12, DB: 3) | 200 OK [http://localhost/voters/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#images to png (for 127.0.0.1 at 2010-05-20 15:40:23) [GET]
+  Parameters: {"id"=>"vote_logo"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-20 15:40:39) [GET]
+  [4;36;1mVoter Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 16ms (View: 9, DB: 2) | 200 OK [http://localhost/voters/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#images to png (for 127.0.0.1 at 2010-05-20 15:40:39) [GET]
+  Parameters: {"id"=>"vote_logo"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-20 15:40:48) [GET]
+  [4;35;1mVoter Columns (3.2ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 19ms (View: 11, DB: 3) | 200 OK [http://localhost/voters/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#images to png (for 127.0.0.1 at 2010-05-20 15:40:49) [GET]
+  Parameters: {"id"=>"vote_logo"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-20 15:41:00) [GET]
+  [4;36;1mVoter Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 17ms (View: 11, DB: 2) | 200 OK [http://localhost/voters/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#images to png (for 127.0.0.1 at 2010-05-20 15:41:00) [GET]
+  Parameters: {"id"=>"vote_logo"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-20 15:41:10) [GET]
+  [4;35;1mVoter Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 19ms (View: 11, DB: 3) | 200 OK [http://localhost/voters/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#images to png (for 127.0.0.1 at 2010-05-20 15:41:10) [GET]
+  Parameters: {"id"=>"vote_logo"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-20 15:46:52) [GET]
+  [4;36;1mVoter Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 21ms (View: 14, DB: 2) | 200 OK [http://localhost/voters/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (3.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#images to png (for 127.0.0.1 at 2010-05-20 15:46:53) [GET]
+  Parameters: {"id"=>"vote_logo"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-20 15:48:38) [GET]
+  [4;35;1mVoter Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 90ms (View: 82, DB: 2) | 200 OK [http://localhost/voters/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#images to png (for 127.0.0.1 at 2010-05-20 15:48:38) [GET]
+  Parameters: {"id"=>"vote_logo"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-20 15:49:07) [GET]
+  [4;36;1mVoter Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 15ms (View: 9, DB: 2) | 200 OK [http://localhost/voters/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#images to png (for 127.0.0.1 at 2010-05-20 15:49:07) [GET]
+  Parameters: {"id"=>"vote_logo"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (1.6ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-20 15:49:19) [GET]
+  [4;35;1mVoter Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 23ms (View: 10, DB: 3) | 200 OK [http://localhost/voters/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#images to png (for 127.0.0.1 at 2010-05-20 15:49:19) [GET]
+  Parameters: {"id"=>"vote_logo"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-20 15:57:26) [GET]
+  [4;36;1mVoter Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 91ms (View: 84, DB: 2) | 200 OK [http://localhost/voters/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-20 16:04:29) [GET]
+  [4;35;1mVoter Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 22ms (View: 15, DB: 3) | 200 OK [http://localhost/voters/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-20 16:07:05) [GET]
+  [4;36;1mVoter Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 17ms (View: 10, DB: 2) | 200 OK [http://localhost/voters/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-20 16:07:19) [GET]
+  [4;35;1mVoter Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 18ms (View: 10, DB: 3) | 200 OK [http://localhost/voters/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-20 16:07:40) [GET]
+  [4;36;1mVoter Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 16ms (View: 10, DB: 2) | 200 OK [http://localhost/voters/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-20 16:07:55) [GET]
+  [4;35;1mVoter Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 31ms (View: 23, DB: 2) | 200 OK [http://localhost/voters/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-20 16:10:14) [GET]
+  [4;36;1mVoter Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 19ms (View: 11, DB: 3) | 200 OK [http://localhost/voters/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-20 16:10:33) [GET]
+  [4;35;1mVoter Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.2ms)
+Completed in 18ms (View: 11, DB: 2) | 200 OK [http://localhost/voters/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-20 16:10:59) [GET]
+  [4;36;1mVoter Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 16ms (View: 9, DB: 2) | 200 OK [http://localhost/voters/new]
+  [4;35;1mSQL (0.5ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-20 16:17:13) [GET]
+  [4;35;1mVoter Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 22ms (View: 16, DB: 2) | 200 OK [http://localhost/voters/new]
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-20 17:32:34) [GET]
+  [4;36;1mVoter Columns (4.2ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 28ms (View: 17, DB: 5) | 200 OK [http://localhost/voters/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-20 17:32:47) [GET]
+  [4;35;1mVoter Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.2ms)
+Completed in 20ms (View: 11, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-20 17:33:51) [GET]
+  [4;36;1mVoter Columns (9.5ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 55ms (View: 25, DB: 10) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-20 17:34:36) [GET]
+  [4;35;1mVoter Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 16ms (View: 9, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-20 17:37:52) [GET]
+  [4;36;1mVoter Columns (15.1ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 37ms (View: 16, DB: 15) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-20 17:38:02) [GET]
+  [4;35;1mVoter Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 16ms (View: 10, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#create (for 127.0.0.1 at 2010-05-20 17:38:21) [POST]
+  Parameters: {"commit"=>"SEARCH", "authenticity_token"=>"S1uyoW5vxx8zB4yIIZY08IARQHQLB120gqSgiSUr6Nw=", "voter"=>{"name"=>"", "city"=>"", "date_searched"=>"", "phone_number"=>"", "street_address"=>"", "email"=>""}}
+  [4;36;1mVoter Columns (6.1ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering voters/new
+Completed in 47ms (View: 26, DB: 9) | 200 OK [http://localhost/voters]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#create (for 127.0.0.1 at 2010-05-20 17:46:23) [POST]
+  Parameters: {"commit"=>"SEARCH", "authenticity_token"=>"S1uyoW5vxx8zB4yIIZY08IARQHQLB120gqSgiSUr6Nw=", "voter"=>{"name"=>"", "city"=>"", "date_searched"=>"2010-05-22", "phone_number"=>"", "street_address"=>"", "email"=>""}}
+  [4;35;1mVoter Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering voters/new
+Completed in 98ms (View: 20, DB: 3) | 200 OK [http://localhost/voters]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-20 17:46:31) [GET]
+  [4;36;1mVoter Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 19ms (View: 10, DB: 3) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#create (for 127.0.0.1 at 2010-05-20 17:46:36) [POST]
+  Parameters: {"commit"=>"SEARCH", "authenticity_token"=>"S1uyoW5vxx8zB4yIIZY08IARQHQLB120gqSgiSUr6Nw=", "voter"=>{"name"=>"", "city"=>"", "date_searched"=>"", "phone_number"=>"", "street_address"=>"", "email"=>""}}
+  [4;35;1mVoter Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering voters/new
+Completed in 32ms (View: 20, DB: 2) | 200 OK [http://localhost/voters]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (3.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-20 17:51:07) [GET]
+  [4;36;1mVoter Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (2.4ms)
+Completed in 21ms (View: 13, DB: 5) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#create (for 127.0.0.1 at 2010-05-20 17:51:13) [POST]
+  Parameters: {"commit"=>"SEARCH", "authenticity_token"=>"S1uyoW5vxx8zB4yIIZY08IARQHQLB120gqSgiSUr6Nw=", "voter"=>{"name"=>"", "city"=>"", "date_searched"=>"", "phone_number"=>"", "street_address"=>"", "email"=>""}}
+  [4;35;1mVoter Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering voters/new
+Completed in 99ms (View: 86, DB: 2) | 200 OK [http://localhost/voters]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#create (for 127.0.0.1 at 2010-05-20 17:53:06) [POST]
+  Parameters: {"commit"=>"SEARCH", "authenticity_token"=>"S1uyoW5vxx8zB4yIIZY08IARQHQLB120gqSgiSUr6Nw=", "voter"=>{"name"=>"", "city"=>"", "date_searched"=>"", "phone_number"=>"", "street_address"=>"", "email"=>""}}
+  [4;36;1mVoter Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering voters/new
+Completed in 40ms (View: 28, DB: 3) | 200 OK [http://localhost/voters]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#create (for 127.0.0.1 at 2010-05-20 17:54:35) [POST]
+  Parameters: {"commit"=>"SEARCH", "authenticity_token"=>"S1uyoW5vxx8zB4yIIZY08IARQHQLB120gqSgiSUr6Nw=", "voter"=>{"name"=>"", "city"=>"", "date_searched"=>"", "phone_number"=>"", "street_address"=>"", "email"=>""}}
+  [4;35;1mVoter Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering voters/new
+Completed in 42ms (View: 31, DB: 2) | 200 OK [http://localhost/voters]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#create (for 127.0.0.1 at 2010-05-20 17:59:41) [POST]
+  Parameters: {"commit"=>"SEARCH", "authenticity_token"=>"S1uyoW5vxx8zB4yIIZY08IARQHQLB120gqSgiSUr6Nw=", "voter"=>{"name"=>"", "city"=>"", "date_searched"=>"", "phone_number"=>"", "street_address"=>"", "email"=>""}}
+  [4;36;1mVoter Columns (3.4ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering voters/new
+Completed in 36ms (View: 22, DB: 5) | 200 OK [http://localhost/voters]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#create (for 127.0.0.1 at 2010-05-20 18:00:11) [POST]
+  Parameters: {"commit"=>"SEARCH", "authenticity_token"=>"S1uyoW5vxx8zB4yIIZY08IARQHQLB120gqSgiSUr6Nw=", "voter"=>{"name"=>"", "city"=>"", "date_searched"=>"", "phone_number"=>"", "street_address"=>"", "email"=>""}}
+  [4;35;1mVoter Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering voters/new
+Completed in 36ms (View: 24, DB: 3) | 200 OK [http://localhost/voters]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#create (for 127.0.0.1 at 2010-05-20 18:00:58) [POST]
+  Parameters: {"commit"=>"SEARCH", "authenticity_token"=>"S1uyoW5vxx8zB4yIIZY08IARQHQLB120gqSgiSUr6Nw=", "voter"=>{"name"=>"", "city"=>"", "date_searched"=>"", "phone_number"=>"", "street_address"=>"", "email"=>""}}
+  [4;36;1mVoter Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering voters/new
+Completed in 34ms (View: 21, DB: 4) | 200 OK [http://localhost/voters]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#create (for 127.0.0.1 at 2010-05-20 18:02:38) [POST]
+  Parameters: {"commit"=>"SEARCH", "authenticity_token"=>"S1uyoW5vxx8zB4yIIZY08IARQHQLB120gqSgiSUr6Nw=", "voter"=>{"name"=>"", "city"=>"", "date_searched"=>"", "phone_number"=>"", "street_address"=>"", "email"=>""}}
+  [4;35;1mVoter Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering voters/new
+Completed in 38ms (View: 26, DB: 2) | 200 OK [http://localhost/voters]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#create (for 127.0.0.1 at 2010-05-20 18:03:07) [POST]
+  Parameters: {"commit"=>"SEARCH", "authenticity_token"=>"S1uyoW5vxx8zB4yIIZY08IARQHQLB120gqSgiSUr6Nw=", "voter"=>{"name"=>"", "city"=>"", "date_searched"=>"", "phone_number"=>"", "street_address"=>"", "email"=>""}}
+  [4;36;1mVoter Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering voters/new
+Completed in 30ms (View: 19, DB: 2) | 200 OK [http://localhost/voters]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#create (for 127.0.0.1 at 2010-05-20 18:03:33) [POST]
+  Parameters: {"commit"=>"SEARCH", "authenticity_token"=>"S1uyoW5vxx8zB4yIIZY08IARQHQLB120gqSgiSUr6Nw=", "voter"=>{"name"=>"", "city"=>"", "date_searched"=>"", "phone_number"=>"", "street_address"=>"", "email"=>""}}
+  [4;35;1mVoter Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering voters/new
+Completed in 42ms (View: 29, DB: 2) | 200 OK [http://localhost/voters]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#create (for 127.0.0.1 at 2010-05-20 18:03:58) [POST]
+  Parameters: {"commit"=>"SEARCH", "authenticity_token"=>"S1uyoW5vxx8zB4yIIZY08IARQHQLB120gqSgiSUr6Nw=", "voter"=>{"name"=>"Corey Kuwanoe", "city"=>"Las Vegas", "date_searched"=>"05/22/2010", "phone_number"=>"7027684176", "street_address"=>"1525 Canyon Ledge Ct", "email"=>"eschalon@gmail.com"}}
+  [4;36;1mVoter Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mVoter Create (28.8ms)[0m   [0;1mINSERT INTO `voters` (`name`, `city`, `created_at`, `zip_code`, `updated_at`, `date_searched`, `street_address`, `phone_number`, `email`) VALUES('Corey Kuwanoe', 'Las Vegas', '2010-05-21 01:03:58', NULL, '2010-05-21 01:03:58', '2010-05-22', '1525 Canyon Ledge Ct', '7027684176', 'eschalon@gmail.com')[0m
+  [4;35;1mSQL (4.5ms)[0m   [0mCOMMIT[0m
+Sent mail to anagatani@roryreid.com
+
+Date: Thu, 20 May 2010 18:03:58 -0700
+From: ckuwanoe@roryreid.com
+To: anagatani@roryreid.com
+Subject: Corey Kuwanoe has looked up their voting location in Las Vegas
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Corey Kuwanoe has looked up their early vote location for 2010-05-22.
+
+They looked up address: 1525 Canyon Ledge Ct.
+
+You can contact them at 7027684176.
+Redirected to http://localhost:4000/voters/19
+Completed in 689ms (DB: 35) | 302 Found [http://localhost/voters]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#show (for 127.0.0.1 at 2010-05-20 18:03:58) [GET]
+  Parameters: {"id"=>"19"}
+  [4;36;1mVoter Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+  [4;35;1mVoter Load (15.5ms)[0m   [0mSELECT * FROM `voters` WHERE (`voters`.`id` = 19) [0m
+Rendering template within layouts/application
+Rendering voters/show
+Rendered voters/_javascript (0.2ms)
+Completed in 29ms (View: 6, DB: 18) | 200 OK [http://localhost/voters/19]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-20 18:09:20) [GET]
+  [4;36;1mVoter Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (2.1ms)
+Completed in 24ms (View: 17, DB: 2) | 200 OK [http://localhost/voters/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#create (for 127.0.0.1 at 2010-05-20 18:09:36) [POST]
+  Parameters: {"commit"=>"SEARCH", "authenticity_token"=>"S1uyoW5vxx8zB4yIIZY08IARQHQLB120gqSgiSUr6Nw=", "voter"=>{"name"=>"Corey Kuwanoe", "city"=>"Las Vegas", "date_searched"=>"05/22/2010", "phone_number"=>"7027684176", "street_address"=>"1525 Canyon Ledge Ct", "email"=>"eschalon@gmail.com"}}
+  [4;35;1mVoter Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mVoter Create (5.0ms)[0m   [0mINSERT INTO `voters` (`name`, `city`, `created_at`, `zip_code`, `updated_at`, `date_searched`, `street_address`, `phone_number`, `email`) VALUES('Corey Kuwanoe', 'Las Vegas', '2010-05-21 01:09:36', NULL, '2010-05-21 01:09:36', '2010-05-22', '1525 Canyon Ledge Ct', '7027684176', 'eschalon@gmail.com')[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCOMMIT[0m
+Sent mail to anagatani@roryreid.com
+
+Date: Thu, 20 May 2010 18:09:36 -0700
+From: ckuwanoe@roryreid.com
+To: anagatani@roryreid.com
+Subject: Corey Kuwanoe has looked up their voting location in Las Vegas
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Corey Kuwanoe has looked up their early vote location for 2010-05-22.
+
+They looked up address: 1525 Canyon Ledge Ct.
+
+You can contact them at 7027684176.
+Redirected to http://localhost:4000/voters/20
+Completed in 646ms (DB: 9) | 302 Found [http://localhost/voters]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#show (for 127.0.0.1 at 2010-05-20 18:09:36) [GET]
+  Parameters: {"id"=>"20"}
+  [4;35;1mVoter Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+  [4;36;1mVoter Load (1.2ms)[0m   [0;1mSELECT * FROM `voters` WHERE (`voters`.`id` = 20) [0m
+Rendering template within layouts/application
+Rendering voters/show
+Rendered voters/_javascript (3.6ms)
+Completed in 17ms (View: 9, DB: 3) | 200 OK [http://localhost/voters/20]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-20 18:11:24) [GET]
+  [4;35;1mVoter Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 17ms (View: 9, DB: 2) | 200 OK [http://localhost/voters/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#create (for 127.0.0.1 at 2010-05-20 18:12:08) [POST]
+  Parameters: {"commit"=>"SEARCH", "authenticity_token"=>"S1uyoW5vxx8zB4yIIZY08IARQHQLB120gqSgiSUr6Nw=", "voter"=>{"name"=>"Corey Kuwanoe", "city"=>"Las Vegas", "date_searched"=>"05/22/2010", "phone_number"=>"7027684176", "street_address"=>"1525 Canyon Ledge Ct", "email"=>"eschalon@gmail.com"}}
+  [4;36;1mVoter Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mVoter Create (0.3ms)[0m   [0;1mINSERT INTO `voters` (`name`, `city`, `created_at`, `zip_code`, `updated_at`, `date_searched`, `street_address`, `phone_number`, `email`) VALUES('Corey Kuwanoe', 'Las Vegas', '2010-05-21 01:12:08', NULL, '2010-05-21 01:12:08', '2010-05-22', '1525 Canyon Ledge Ct', '7027684176', 'eschalon@gmail.com')[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mCOMMIT[0m
+Sent mail to anagatani@roryreid.com
+
+Date: Thu, 20 May 2010 18:12:08 -0700
+From: ckuwanoe@roryreid.com
+To: anagatani@roryreid.com
+Subject: Corey Kuwanoe has looked up their voting location in Las Vegas
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Corey Kuwanoe has looked up their early vote location for 2010-05-22.
+
+They looked up address: 1525 Canyon Ledge Ct.
+
+You can contact them at 7027684176.
+Redirected to http://localhost:4000/voters/21
+Completed in 698ms (DB: 6) | 302 Found [http://localhost/voters]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#show (for 127.0.0.1 at 2010-05-20 18:12:09) [GET]
+  Parameters: {"id"=>"21"}
+  [4;36;1mVoter Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+  [4;35;1mVoter Load (0.3ms)[0m   [0mSELECT * FROM `voters` WHERE (`voters`.`id` = 21) [0m
+Rendering template within layouts/application
+Rendering voters/show
+Rendered voters/_javascript (0.2ms)
+Completed in 12ms (View: 5, DB: 2) | 200 OK [http://localhost/voters/21]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-20 18:12:12) [GET]
+  [4;36;1mVoter Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 18ms (View: 9, DB: 2) | 200 OK [http://localhost/voters/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#create (for 127.0.0.1 at 2010-05-20 18:12:30) [POST]
+  Parameters: {"commit"=>"SEARCH", "authenticity_token"=>"S1uyoW5vxx8zB4yIIZY08IARQHQLB120gqSgiSUr6Nw=", "voter"=>{"name"=>"Corey Kuwanoe", "city"=>"Las Vegas", "date_searched"=>"06/04/2010", "phone_number"=>"7027684176", "street_address"=>"1525 Canyon Ledge Ct", "email"=>"eschalon@gmail.com"}}
+  [4;35;1mVoter Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mVoter Create (0.5ms)[0m   [0mINSERT INTO `voters` (`name`, `city`, `created_at`, `zip_code`, `updated_at`, `date_searched`, `street_address`, `phone_number`, `email`) VALUES('Corey Kuwanoe', 'Las Vegas', '2010-05-21 01:12:30', NULL, '2010-05-21 01:12:30', '2010-05-22', '1525 Canyon Ledge Ct', '7027684176', 'eschalon@gmail.com')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Sent mail to anagatani@roryreid.com
+
+Date: Thu, 20 May 2010 18:12:30 -0700
+From: ckuwanoe@roryreid.com
+To: anagatani@roryreid.com
+Subject: Corey Kuwanoe has looked up their voting location in Las Vegas
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Corey Kuwanoe has looked up their early vote location for 2010-05-22.
+
+They looked up address: 1525 Canyon Ledge Ct.
+
+You can contact them at 7027684176.
+Redirected to http://localhost:4000/voters/22
+Completed in 584ms (DB: 4) | 302 Found [http://localhost/voters]
+  [4;35;1mSQL (0.9ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#show (for 127.0.0.1 at 2010-05-20 18:12:30) [GET]
+  Parameters: {"id"=>"22"}
+  [4;35;1mVoter Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+  [4;36;1mVoter Load (1.4ms)[0m   [0;1mSELECT * FROM `voters` WHERE (`voters`.`id` = 22) [0m
+Rendering template within layouts/application
+Rendering voters/show
+Rendered voters/_javascript (0.2ms)
+Completed in 14ms (View: 5, DB: 5) | 200 OK [http://localhost/voters/22]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#show (for 127.0.0.1 at 2010-05-20 18:13:26) [GET]
+  Parameters: {"id"=>"22"}
+  [4;35;1mVoter Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+  [4;36;1mVoter Load (3.5ms)[0m   [0;1mSELECT * FROM `voters` WHERE (`voters`.`id` = 22) [0m
+Rendering template within layouts/application
+Rendering voters/show
+Rendered voters/_javascript (0.2ms)
+Completed in 18ms (View: 6, DB: 6) | 200 OK [http://localhost/voters/22]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#show (for 127.0.0.1 at 2010-05-20 18:14:32) [GET]
+  Parameters: {"id"=>"22"}
+  [4;35;1mVoter Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+  [4;36;1mVoter Load (0.3ms)[0m   [0;1mSELECT * FROM `voters` WHERE (`voters`.`id` = 22) [0m
+Rendering template within layouts/application
+Rendering voters/show
+Rendered voters/_javascript (0.2ms)
+Completed in 13ms (View: 6, DB: 3) | 200 OK [http://localhost/voters/22]
+  [4;35;1mSQL (15.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-20 18:14:40) [GET]
+  [4;35;1mVoter Columns (4.6ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 29ms (View: 13, DB: 20) | 200 OK [http://localhost/voters/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#create (for 127.0.0.1 at 2010-05-20 18:14:56) [POST]
+  Parameters: {"commit"=>"SEARCH", "authenticity_token"=>"S1uyoW5vxx8zB4yIIZY08IARQHQLB120gqSgiSUr6Nw=", "voter"=>{"name"=>"Corey Kuwanoe", "city"=>"Las Vegas", "date_searched"=>"06/02/2010", "phone_number"=>"7027684176", "street_address"=>"1525 Canyon Ledge Ct", "email"=>"eschalon@gmail.com"}}
+  [4;36;1mVoter Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mVoter Create (0.3ms)[0m   [0;1mINSERT INTO `voters` (`name`, `city`, `created_at`, `zip_code`, `updated_at`, `date_searched`, `street_address`, `phone_number`, `email`) VALUES('Corey Kuwanoe', 'Las Vegas', '2010-05-21 01:14:56', NULL, '2010-05-21 01:14:56', '2010-06-02', '1525 Canyon Ledge Ct', '7027684176', 'eschalon@gmail.com')[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mCOMMIT[0m
+Sent mail to anagatani@roryreid.com
+
+Date: Thu, 20 May 2010 18:14:56 -0700
+From: ckuwanoe@roryreid.com
+To: anagatani@roryreid.com
+Subject: Corey Kuwanoe has looked up their voting location in Las Vegas
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Corey Kuwanoe has looked up their early vote location for 2010-06-02.
+
+They looked up address: 1525 Canyon Ledge Ct.
+
+You can contact them at 7027684176.
+Redirected to http://localhost:4000/voters/23
+Completed in 646ms (DB: 5) | 302 Found [http://localhost/voters]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#show (for 127.0.0.1 at 2010-05-20 18:14:56) [GET]
+  Parameters: {"id"=>"23"}
+  [4;36;1mVoter Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+  [4;35;1mVoter Load (2.0ms)[0m   [0mSELECT * FROM `voters` WHERE (`voters`.`id` = 23) [0m
+Rendering template within layouts/application
+Rendering voters/show
+Rendered voters/_javascript (0.2ms)
+Completed in 14ms (View: 6, DB: 4) | 200 OK [http://localhost/voters/23]

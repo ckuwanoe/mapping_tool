@@ -16,10 +16,10 @@ class VotersController < ApplicationController
     end
     @voter = Voter.new(params[:voter])
     if @voter.save
-      flash[:notice] = "Successfully created voter."
       VoterMailer.deliver_send_notice(@voter)
       redirect_to @voter
     else
+      flash[:error] = "Could not look up address. Please try again."
       render :action => 'new'
     end
   end

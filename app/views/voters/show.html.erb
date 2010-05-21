@@ -1,4 +1,5 @@
 <div id="form">
   <p><%= @voter.street_address %></p>
   <p>on <%= @voter.date_searched %></p>
+  <%= link_to "Search again", :action => "new" %>
 </div>
