@@ -15,8 +15,8 @@ class VotersController < ApplicationController
   def create
     if params[:voter][:month] and params[:voter][:day]
       params[:voter][:date_searched] = '2010-' + params[:voter][:month] + '-' + params[:voter][:day]
-      params[:voter][:month].delete
-      params[:voter][:day].delete
+      params[:voter][:month].destroy
+      params[:voter][:day].destroy
     end
     @voter = Voter.new(params[:voter])
     if @voter.save
