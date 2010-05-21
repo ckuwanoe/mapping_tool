@@ -71,12 +71,18 @@ body#earlyvote #wrapper ul:first-child {
 	font-size: 18px;
 }
 
-body#earlyvote #faq {
+body#earlyvote #wrapper #faq {
 	min-height: 703px;
 	overflow: hidden;
-
+	margin-top: 25px;
+	
 }
 
+body#earlyvote #wrapper #faq ul li {
+	color: #000000;
+	line-height: 3em;
+	font-weight: normal;
+}
 	
 body#earlyvote #main {
 	overflow: hidden;

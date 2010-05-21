@@ -4327,3 +4327,213 @@ Rendering template within layouts/application
 Rendering voters/show
 Rendered voters/_javascript (0.2ms)
 Completed in 14ms (View: 6, DB: 4) | 200 OK [http://localhost/voters/23]
+  [4;36;1mSQL (16.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (3.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-21 10:53:01) [GET]
+  [4;36;1mVoter Columns (36.2ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (1.2ms)
+Completed in 330ms (View: 219, DB: 57) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-21 10:53:32) [GET]
+  [4;35;1mVoter Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 18ms (View: 10, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (3.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-21 10:54:45) [GET]
+  [4;36;1mVoter Columns (5.1ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 20ms (View: 10, DB: 10) | 200 OK [http://localhost/]
+  [4;35;1mSQL (2.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-21 10:55:08) [GET]
+  [4;35;1mVoter Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 25ms (View: 18, DB: 4) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-21 10:56:21) [GET]
+  [4;36;1mVoter Columns (3.1ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 48ms (View: 38, DB: 3) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-21 10:57:54) [GET]
+  [4;35;1mVoter Columns (4.6ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 27ms (View: 17, DB: 5) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-21 10:58:59) [GET]
+  [4;36;1mVoter Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 28ms (View: 20, DB: 3) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-21 10:59:45) [GET]
+  [4;35;1mVoter Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 56ms (View: 49, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-21 11:00:25) [GET]
+  [4;36;1mVoter Columns (5.8ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 81ms (View: 70, DB: 6) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-21 11:00:48) [GET]
+  [4;35;1mVoter Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 23ms (View: 16, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-21 11:01:49) [GET]
+  [4;36;1mVoter Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.3ms)
+Completed in 17ms (View: 10, DB: 3) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-21 11:02:11) [GET]
+  [4;35;1mVoter Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 25ms (View: 18, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-21 11:02:31) [GET]
+  [4;36;1mVoter Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 84ms (View: 17, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-21 11:02:43) [GET]
+  [4;35;1mVoter Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 16ms (View: 9, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-21 11:03:05) [GET]
+  [4;36;1mVoter Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 29ms (View: 15, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-21 11:03:29) [GET]
+  [4;35;1mVoter Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 18ms (View: 11, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-21 11:03:43) [GET]
+  [4;36;1mVoter Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 80ms (View: 73, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-21 11:03:53) [GET]
+  [4;35;1mVoter Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 18ms (View: 11, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-21 11:04:37) [GET]
+  [4;36;1mVoter Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 16ms (View: 10, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-21 11:04:53) [GET]
+  [4;35;1mVoter Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.1ms)
+Completed in 36ms (View: 26, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VotersController#new (for 127.0.0.1 at 2010-05-21 11:05:15) [GET]
+  [4;36;1mVoter Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `voters`[0m
+Rendering template within layouts/application
+Rendering voters/new
+Rendered voters/_javascript (0.2ms)
+Completed in 84ms (View: 77, DB: 2) | 200 OK [http://localhost/]
