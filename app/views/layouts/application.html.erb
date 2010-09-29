@@ -8,42 +8,15 @@
   </head>
   <body onload="initialize();" id="earlyvote">
     <div id="header">
-  		<a href="http://rory2010.com"><img src="/images/vote_logo.png" width="419" height="91" class="logo"></a>
-  		<div id="header-box"><h2>Early Vote is open from May 22 through June 4!</h2></div>
+      <a href="http://roryreid.com"><img src="/images/organize_nevada_logo.png" class="logo"></a>
     </div>	
     <div id="wrapper">
-      <ul>
-      	<li><a href="#main">Find your early voting location.</a></li>
-        <li><a href="#faq">Questions?</a></li>
-      </ul>
-
       <div id="main">
         <%- flash.each do |name, msg| -%>
           <%= content_tag :div, msg, :id => "flash_#{name}" %>
         <%- end -%>
-        <div id="map_canvas"></div>
         <%= yield %>
-        </div>
-        <div id="faq" class="text">
-          <br/>
-          <ul>
-            <li>When is Early Vote for the Primary?<br/>
-
-            -Early Voting starts Saturday, May 22 and ends Friday, June 4.</li>
-
-            <li>Where can I vote?<br/>
-
-            -You can vote at any of the voting locations in your home county.  Clark county voters can vote at any location in Clark county, Washoe county voters can vote at any location in Washoe county, Elko county voters... ok, you get the picture.</li>
-
-            <li>When can I vote?<br/>
-
-            -Polling hours vary by polling location.  Hover your mouse over the icon on the map to check the hours of your most convenient location.</li>
-
-            <li>I only see my own house--what's going on?<br/>
-
-            -Make sure you've filled in each field, and picked a date between May 22 and June 4.</li>
-            </li>
-          </ul>
+        <div id="map_canvas"></div>
         </div>
       </div>
     </div>
