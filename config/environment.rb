@@ -48,7 +48,7 @@ Rails::Initializer.run do |config|
   :domain => "roryreid.com",
   :authentication => :plain,
   :user_name => "ckuwanoe@roryreid.com",
-  :password => "cr8tion",
+  :password => "",
   :tls => :true
   }
   config.action_mailer.perform_deliveries = :true
